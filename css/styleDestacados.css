@@ -1,0 +1,64 @@
+#recomendados {
+	position: relative;
+	float: right;
+	display: flex;
+	flex-direction: column;
+	height: 300px;
+	width: 51wh;
+    margin-left: 20px;
+}
+
+.btnCambiarRuta{
+    text-align: center;    
+}
+
+.btnCambiarRuta img{
+    object-fit: cover;
+    height: 40px;   
+}
+
+.ruta {
+    height: 150px;
+    width:50vw ;
+    margin-bottom: 25px;
+}
+
+.portadaRuta img{
+    border-radius: 10px;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;    
+}
+
+.portadaRuta {
+    margin-left: 5px;
+    position: relative;
+    float: left;
+    clear: left;
+    width: 170px;
+    height: 120px;
+
+}
+
+.datosRuta {
+    position: relative;
+    float: right;
+    width: 65%;
+}
+
+.nombreRuta {
+    height: 20%;
+    margin-top: 0;
+}
+
+.nombreRuta h1{
+    margin-top: 0;
+}
+
+.descripcionRuta {
+    height: 80%;
+    margin-bottom: 10px;
+}
+
+
+
