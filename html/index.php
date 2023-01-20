@@ -13,7 +13,7 @@
     <?php include('../plantillas/header.php'); ?>
     <div class="contenido">
         <div id="iframeRuta">
-        <iframe frameBorder="0" scrolling="no" src="https://es.wikiloc.com/wikiloc/spatialArtifacts.do?event=view&id=12718712&measures=off&title=on&near=off&images=on&maptype=H" width="500" height="400"></iframe><div style="color:#777;font-size:11px;line-height:16px;">Powered by <a style="color:#06d;font-size:11px;line-height:16px;" target="_blank" href="https://es.wikiloc.com">Wikiloc</a></div>
+            <iframe frameBorder="0" scrolling="no" src="https://es.wikiloc.com/wikiloc/spatialArtifacts.do?event=view&id=12718712&measures=off&title=on&near=off&images=on&maptype=H" width="500" height="400"></iframe><div style="color:#777;font-size:11px;line-height:16px;">Powered by <a style="color:#06d;font-size:11px;line-height:16px;" target="_blank" href="https://es.wikiloc.com">Wikiloc</a></div>
         </div>
         <div id="recomendados">
             <div class="btnCambiarRuta" id="anteriorRuta">

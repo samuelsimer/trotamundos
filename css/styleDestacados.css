@@ -20,14 +20,22 @@
 .ruta {
     height: 150px;
     width:50vw ;
-    margin-bottom: 25px;
+    margin-top: 12px;
+    margin-bottom: 12px;    
+    display: flex;
+    align-items: center;
+}
+
+.ruta:hover {
+    -webkit-box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47);
+    box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47);
 }
 
 .portadaRuta img{
     border-radius: 10px;
     object-fit: cover;
     height: 100%;
-    width: 100%;    
+    width: 100%;
 }
 
 .portadaRuta {
@@ -37,28 +45,49 @@
     clear: left;
     width: 170px;
     height: 120px;
-
+    vertical-align: middle;
+    
 }
 
 .datosRuta {
     position: relative;
     float: right;
     width: 65%;
+    justify-content: center;
+    margin-left: 20px;
 }
 
 .nombreRuta {
     height: 20%;
-    margin-top: 0;
+    justify-content: center;
+    vertical-align: middle;
+    /* margin-top: 0; */
 }
 
 .nombreRuta h1{
-    margin-top: 0;
+    vertical-align: middle;
+    /* margin-top: 0; */
 }
+
 
 .descripcionRuta {
     height: 80%;
     margin-bottom: 10px;
 }
+
+#iframeRuta {
+    z-index: 0;
+}
+
+@media (max-width: 1120px) {
+
+    #recomendados {
+        position: relative;
+        float: left;
+        height: 500px;
+    }
+}
+
 
 
 
