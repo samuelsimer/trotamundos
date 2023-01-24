@@ -3,9 +3,12 @@
 	float: right;
 	display: flex;
 	flex-direction: column;
-	height: 300px;
+	height: fit-content;
+    background-color: rgba(187, 229, 231, 0.888);
 	width: 51wh;
-    margin-left: 20px;
+    border: 2px solid rgb(228, 167, 129);
+    border-radius: 10px;
+    padding: 5px;
 }
 
 .btnCambiarRuta{
@@ -19,11 +22,13 @@
 
 .ruta {
     height: 150px;
-    width:50vw ;
+    width:100% ;
     margin-top: 12px;
     margin-bottom: 12px;    
     display: flex;
     align-items: center;
+    border: 2px solid rgb(240, 205, 184);
+    border-radius: 10px;
 }
 
 .ruta:hover {
@@ -79,14 +84,37 @@
     z-index: 0;
 }
 
-@media (max-width: 1120px) {
+iframe {
+    animation: fadeIn 2s;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+@media (max-width: 1300px) {
+
+    .contenido {
+        flex-direction: column;
+    }
 
     #recomendados {
         position: relative;
         float: left;
         height: 500px;
+        width: 500px;
     }
 }
+
+@media (max-width: 500px) {
+
+    #recomendados {
+        width: 100%;
+    }
+}
+
+
 
 
 

@@ -16,6 +16,8 @@ header {
         /* background-image: url("../imgs/fondoHeader.jpg"); */
 		background-color: rgba(187, 229, 231, 0.888);
 		margin-bottom: 40px; 
+		display: flex;
+		justify-content: space-evenly;
 }
 
 header div {
@@ -23,8 +25,7 @@ header div {
 }
 
 .imagenHeader{
-	position: relative;
-	margin-left: 35%;
+	justify-content: space-evenly;
 }
 
 .imagenHeader img{
@@ -34,6 +35,7 @@ header div {
 	
 }
 
+/* Boton login */
 .botonLogin {
 	position: relative;
 	float: right;
@@ -51,6 +53,7 @@ header div {
 	text-shadow: 0 1px 0px #322e2e, 1px 0 0px #3a4043, 1px 1px 1px ;
 	color: #ffffff;
 	background: #f3dd78;
+	cursor: pointer; /* Cambia el cursor a una mano */
 }
 
 /* MENU HEADER */
@@ -58,6 +61,7 @@ header div {
 	position: relative;
 	float: left;
 	z-index: 2;
+	width: 174px;
 }
 
 .menuHeader img{
@@ -65,19 +69,23 @@ header div {
 	width: 50px;
 }
 
-.menuHeader:hover nav{
-	margin-left: -35px;
-}
-
 .menuHeader nav{
 	position: absolute;
 	text-decoration: none;
 	margin: 0;
-	margin-left: -250px;
-
-	-webkit-transition: 0.5s linear;
-	transition: 0.5s linear;
+	margin-left: -35px;
+	display: none;
 }
+
+.menuHeader:hover nav {
+	display: block;
+    animation: fadeIn 0.5s;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
 
 .menuHeader {
     color: red;
@@ -105,17 +113,21 @@ header div {
 	margin: auto;
 	text-decoration: none;
 	color: #222;
+	padding: 20px;
 }
 
-.contenido {
-        flex-grow: 1; /* En este caso CUERPO se comporta como "elemento hijo" */
-        min-height: 60vh;
-		padding: 20px;
-}
+
 
 
 
 /* CONTENIDO */
+
+.contenido {
+        flex-grow: 1; /* En este caso CUERPO se comporta como "elemento hijo" */
+        min-height: 60vh;
+		display: flex;
+		justify-content: space-evenly;
+}
 
 #iframeRuta{
 	width: fit-content;
@@ -294,14 +306,23 @@ header div {
 /* If you don't want the footer to be responsive, remove these media queries */
 
 @media (max-width: 880px) {
+	header {
+		text-align: center;
+		flex-direction: column;
+		height: 400px;
+	}
 
-        body{
-                margin-bottom: 500px;
-        }
+	.menuHeader {
+		width: fit-content;
+	}
+
+	body{
+			margin-bottom: 500px;
+	}
 
 	.footer-distributed{
 		font: bold 14px sans-serif;
-                height: fit-content;
+        height: fit-content;
 	}
 
 	.footer-distributed .footer-left,

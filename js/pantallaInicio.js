@@ -27,13 +27,10 @@ function añadirListener(){
     //Añadimos las funciones de navegación
     document.querySelector('#anteriorRuta').addEventListener('click', function(){
         pagina!=1 ? pagina-- : "";
-        console.log(pagina);
         renderRutas();
     } );
     document.querySelector('#siguienteRuta').addEventListener('click', function(){
         pagina!=3 ? pagina++ : "";
-        console.log(pagina);
-        console.log("siguiente");
         renderRutas();
     } );
 }
