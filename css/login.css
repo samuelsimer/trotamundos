@@ -12,7 +12,7 @@
   }
   
   .form {
-    background: rgba(187, 229, 231, 0.888);
+    background: #cceaf4;
     padding: 40px;
     max-width: 600px;
     margin: 40px auto;
@@ -24,6 +24,7 @@
     list-style: none;
     padding: 0;
     margin: 0 0 40px 0;
+    display: block;
   }
   .tab-group:after {
     content: "";
@@ -63,7 +64,11 @@
     margin: 0 0 40px;
   }
 
-  input, textarea {
+  label {
+    color: #858a89;
+  }
+
+  .field-wrap input, textarea {
     font-size: 22px;
     display: block;
     width: 100%;
@@ -76,7 +81,7 @@
     border-radius: 0;
     transition: border-color .25s ease, box-shadow .25s ease;
   }
-  input:focus, textarea:focus {
+  .field-wrap input:focus, textarea:focus {
     outline: 0;
     border-color: rgba(238, 181, 89);
   }
@@ -114,7 +119,7 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: .1em;
-    background: rgba(238, 181, 89, 0.8);
+    background: rgba(238, 181, 89);
     color: #000000;
     transition: all 0.5s ease;
     -webkit-appearance: none;

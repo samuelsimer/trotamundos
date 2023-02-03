@@ -1,12 +1,40 @@
+/* CONTENIDO */
+
+.contenido {
+    flex-grow: 1; /* En este caso CUERPO se comporta como "elemento hijo" */
+    min-height: 60vh;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Logos categorías */
+.categoriasRuta {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 128px;
+    margin-bottom: 128px;
+}
+
+.categoriaRuta {
+    text-align: center;
+}
+
+/* Rutas recomendadas */
+.rutasRecomendadas {
+    display: flex;
+	justify-content: space-evenly;
+}
+
 #recomendados {
 	position: relative;
 	float: right;
 	display: flex;
 	flex-direction: column;
 	height: fit-content;
-    background-color: rgba(187, 229, 231, 0.888);
 	width: 51wh;
-    border: 2px solid rgb(228, 167, 129);
     border-radius: 10px;
     padding: 5px;
 }
@@ -27,7 +55,7 @@
     margin-bottom: 12px;    
     display: flex;
     align-items: center;
-    border: 2px solid rgb(240, 205, 184);
+    background-color: #cceaf4;
     border-radius: 10px;
 }
 
@@ -80,13 +108,18 @@
     margin-bottom: 10px;
 }
 
-#iframeRuta {
+#iframeRuta{
+	width: fit-content;
+	position: relative;
+	float: left;
     z-index: 0;
+	
 }
 
 iframe {
+	border-radius: 15px;
     animation: fadeIn 2s;
-  }
+}
   
   @keyframes fadeIn {
     0% { opacity: 0; }
@@ -95,7 +128,7 @@ iframe {
 
 @media (max-width: 1300px) {
 
-    .contenido {
+    .rutasRecomendadas {
         flex-direction: column;
     }
 

@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/checkbox.css">
+
     <title>Registro</title>
 </head>
 
@@ -17,53 +19,86 @@
         <div class="form">
 
             <ul class="tab-group">
-                <li class="tab active"><a href="#registrarse" id="btnRegistrarse">Registrarse</a></li>
-                <li class="tab"><a href="#entrar" id="btnEntrar">Loguearse</a></li>
+                <li class="tab active"><a id="btnRegistrarse">Registrarse</a></li>
+                <li class="tab"><a id="btnEntrar">Entrar</a></li>
             </ul>
 
             <div class="tab-content">
+
+                <!-- Apartado registro -->
                 <div id="registrarse">
-                    <h1>Registrate!</h1>
+                    <h1>¡Registrate!</h1>
 
-                    <form action="/" method="post">
+                    <form action="/" id="formulario" method="post">
 
-                        <div class="top-row">
-                            <div class="field-wrap">
-                                <input type="text" name="nombre" required autocomplete="off" placeholder="Nombre *" />
-                            </div>
-
-                            <div class="field-wrap">
-                                <input type="text" name="apellidos" required autocomplete="off" placeholder="Apellidos *" />
-                            </div>
+                        <div class="field-wrap">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" name="nombre" class="nombre" required autocomplete="off" />
+                            <div class="vNombre"></div>
                         </div>
 
                         <div class="field-wrap">
-                            <input type="email" name="email" required autocomplete="off" placeholder="Email *" />
+                            <label for="nUsuario">Nombre Usuario:</label>
+                            <input type="text" name="nUsuario" class="nUsuario" required autocomplete="off" />
+                            <div class="vUsuario"></div>
                         </div>
 
                         <div class="field-wrap">
-                            <input type="password" name="contraseña" required autocomplete="off" placeholder="Contraseña *" />
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" class="email" required autocomplete="off" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" />
+                            <div class="vEmail"></div>
                         </div>
 
                         <div class="field-wrap">
-                            <input type="password" name="contraseña2" required autocomplete="off" placeholder="Repetir contraseña *" />
+                            <label for="contraseña">Contraseña:</label>
+                            <input type="password" name="contraseña" class="contraseña" required autocomplete="off" />
+                            <div class="nvlContraseña"></div>
                         </div>
 
                         <div class="field-wrap">
-                            <input type="text" name="estatura" required autocomplete="off" placeholder="Estatura *" />
+                            <label for="contraseña2">Repetir contraseña:</label>
+                            <input type="password" name="contraseña2" class="contraseña2" required autocomplete="off" />
+                            <div class="vContraseña2"></div>
                         </div>
 
                         <div class="field-wrap">
-                            <input type="text" name="peso" required autocomplete="off" placeholder="Peso *" />
+                            <label for="estatura">Estura(cm):</label>
+                            <input type="number" name="estatura" class="estatura" required autocomplete="off" min="0" max="300"/>
+                            <div class="vEstatura"></div>
                         </div>
 
                         <div class="field-wrap">
-                            <input type="date" name="fechaNac" required autocomplete="off" />
+                            <label for="peso">Peso(kg):</label>
+                            <input type="number" name="peso" class="peso" required autocomplete="off" min="0" max="300"/>
+                            <div class="vpeso"></div>
                         </div>
 
                         <div class="field-wrap">
-                            <input type="text" name="favActividades" required autocomplete="off" placeholder="Actividades favoritas *" />
+                            <label for="fechaNac">Cumpleaños:</label>
+                            <input type="date" name="fechaNac" class="fechaNac" required autocomplete="off" />
                         </div>
+
+                        <div class="container">
+                            <label for="actividades">Actividades favoritas:</label>
+                            <ul class="ks-cboxtags">
+                                <li><input type="checkbox" name="cbCaminar" id="checkboxOne" value="caminar">
+                                    <label for="checkboxOne">caminar</label>
+                                </li>
+                                <li><input type="checkbox" name="cbCorrer" id="checkboxTwo" value="correr">
+                                    <label for="checkboxTwo">correr</label>
+                                </li>
+                                <li><input type="checkbox" name="cbBicicleta" id="checkboxThree" value="bicicleta">
+                                    <label for="checkboxThree">bicicleta</label>
+                                </li>
+                                <li><input type="checkbox" name="cbMoto" id="checkboxFour" value="moto">
+                                    <label for="checkboxFour">moto</label>
+                                </li>
+                                <li><input type="checkbox" name="cbCoche" id="checkboxFive" value="coche">
+                                    <label for="checkboxFour">coche</label>
+                                </li>
+                            </ul>
+                        </div>
+
 
                         <button type="submit" class="button button-block" />Registrarse</button>
 
@@ -71,17 +106,18 @@
 
                 </div>
 
+                <!-- Apartado Iniciar sesion -->
                 <div id="entrar">
-                    <h1>Bienvenido!</h1>
+                    <h1>¡Bienvenido!</h1>
 
                     <form action="/" method="post">
 
                         <div class="field-wrap">
-                            <input type="email" required autocomplete="off" placeholder="Email *" />
+                            <input type="email" class="email" required autocomplete="off" placeholder="Email *" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" />
                         </div>
 
                         <div class="field-wrap">
-                            <input type="password" required autocomplete="off" placeholder="Contraseña *" />
+                            <input type="password" class="password" required autocomplete="off" placeholder="Contraseña *" />
                         </div>
 
                         <p class="forgot"><a href="#">Contraseña olvidada?</a></p>
@@ -101,6 +137,7 @@
     <?php include('../plantillas/footer.php'); ?>
 
     <script src="../js/login.js"></script>
+    <script src="../js/validacionRegistro.js"></script>
 
 </body>
 

@@ -3,7 +3,7 @@ let pagina = 1;
 añadirListener();
 renderRutas();
 
-// Renderiza la página, esta función se llamará al ejecutar el script
+// Renderizar la página, esta función se llamará al ejecutar el script
 // y después de cada vez que se cambie la página
 function renderRutas() {
     let rutasNuevas = rutas.filter( (item, index) => {
@@ -23,8 +23,9 @@ function renderRutas() {
 
 }
 
+// Añadir Listener
 function añadirListener(){
-    //Añadimos las funciones de navegación
+    //Añadir las funciones de navegación
     document.querySelector('#anteriorRuta').addEventListener('click', function(){
         pagina!=1 ? pagina-- : "";
         renderRutas();
@@ -35,13 +36,13 @@ function añadirListener(){
     } );
 }
 
-// Recoge los datos de la ruta y devuelve un nodo HTML con la estructura de la ruta
+// Recoger los datos de la ruta y devolver un nodo HTML con la estructura de la ruta
 function crearRuta( {id, nombre, descripcion, distancia, iframe, portada} ) {
-    // Creamos el div base de la ruta
+    // Crear el div base de la ruta
     let divRuta = document.createElement('div');
     divRuta.classList.add('ruta');
     
-    // Añadimos los datos
+    // Añadir los datos
     divRuta.setAttribute('idRuta', id);
     divRuta.setAttribute('iframe', iframe);
     divRuta.innerHTML = `
