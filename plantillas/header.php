@@ -4,14 +4,19 @@
         <nav>
             <ol>
                 <li><a href="index.php">Inicio</a></li>
-                <li><a href="index.php">Rutas</a></li>
+                <li><a href="busqueda.php">Rutas</a></li>
                 <li><a href="registro.php">Entrar</a></li>
-            </ol>
-            
-            
-            
+            </ol>   
         </nav>
     </div>
     <div class="imagenHeader"><img src="../imgs/logos/header/logo.png" alt="logo"></div>
-    <div class="botonLogin"><button type="submit" onclick="location.href='registro.php'">Entrar/Registrarse</button></div>
+    <div class="botonLogin">
+        <button id="botonLogin" type="submit" onclick="location.href='registro.php'">Entrar/Registrarse</button>
+            <nav>
+                <ol>
+                    <li><a href="usuario.php">Mi cuenta</a></li>
+                    <li>Cerrar sesión</li>
+                </ol>   
+            </nav>
+    </div>
 </header>

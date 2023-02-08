@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/destacados.css">
     <link rel="stylesheet" href="../css/barraBusqueda.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
     <title>Inicio</title>
 </head>
 
@@ -67,8 +72,7 @@
         <div class="rutasRecomendadas">
             <!-- mapa -->
             <div id="iframeRuta">
-                <iframe frameBorder="0" scrolling="no" src="https://es.wikiloc.com/wikiloc/spatialArtifacts.do?event=view&id=12718712&measures=off&title=on&near=off&images=on&maptype=H" width="500" height="400"></iframe>
-                <div style="color:#777;font-size:11px;line-height:16px;">Powered by <a style="color:#06d;font-size:11px;line-height:16px;" target="_blank" href="https://es.wikiloc.com">Wikiloc</a></div>
+                
             </div>
             <!-- Rutas generadas dinamicamente js -->
             <div id="recomendados">
@@ -93,6 +97,9 @@
 
     <script src="../data/data.js"></script>
     <script src="../js/pantallaInicio.js"></script>
+    <script src="../js/usuario.js"></script>
+
+    
 
 </body>
 

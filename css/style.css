@@ -3,6 +3,12 @@ a {
 	color: #222;
 }
 
+#map { 
+	height: 180px; 
+	width: 180px;
+	background-color: #222;
+}
+
 body {
         display: flex;
         flex-direction: column;
@@ -39,7 +45,7 @@ header div {
 
 .botonLogin button{
 	border: 0; /* Cancelar borde del botón */
-	width: fit-content; /* Establecer la longitud y el ancho apropiados del botón */
+	width: 175px; /* Establecer la longitud y el ancho apropiados del botón */
 	height: 30px;
 	margin-top: 18px; /* Establezca el ancho apropiado del marco exterior superior y aumente la distancia desde el cuadro de contraseña superior */
 	font-size: 20px; /* Modificar el tamaño del texto del botón */
@@ -75,7 +81,7 @@ header div {
 	width: 50px;
 }
 
-.menuHeader nav{
+.menuHeader nav, .botonLogin nav{
 	position: absolute;
 	text-decoration: none;
 	margin: 0;
@@ -83,7 +89,7 @@ header div {
 	display: none;
 }
 
-.menuHeader:hover nav {
+.menuHeader:hover nav, .botonLogin:hover nav {
 	display: block;
     animation: fadeIn 0.5s;
   }
@@ -97,11 +103,11 @@ header div {
     color: red;
 }
 
-.menuHeader nav ol{
+.menuHeader nav ol, .botonLogin nav ol{
 	margin: 0;
 }
 
-.menuHeader nav li{
+.menuHeader nav li, .botonLogin nav li{
 	list-style: none;
 	background-color: #a3d1e0;
 	height: 50px;
@@ -111,7 +117,7 @@ header div {
 	border: 2px solid #e4e9ec;
 }
 
-.menuHeader nav li:hover{
+.menuHeader nav li:hover, .botonLogin nav li:hover{
 	background-color: #bae0ee;
 }
 

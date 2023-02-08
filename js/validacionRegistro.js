@@ -20,6 +20,10 @@ estatura.addEventListener('blur', validarEstatura);
 function validarNombre(){
     document.querySelector(".vNombre").textContent = !nombre.value.match(/(\w+\s?\w*)+/g) ?
         "Campo incorrecto, no dejes el campo vacío y escribe solo letras" : "";
+
+        if(nombre.value.match(/(\w+\s?\w*)+/g)){
+            nombre.value = "";
+        }
     
 }
 
@@ -27,12 +31,22 @@ function validarNombre(){
 function validarNUsuario(){
     document.querySelector(".vUsuario").textContent = !nUsuario.value.match(/(\w+\s?\w*)+/g) ?
         "Campo incorrecto, no dejes el campo vacío y escribe solo letras" : "";
+
+        if(nUsuario.value.match(/(\w+\s?\w*)+/g)){
+            nUsuario.value = "";
+        }
 }
 
 //Validación email
 function validarEmail(){
-    document.querySelector(".vEmail").textContent = !nombre.value.match(/\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+/g) ?
+    document.querySelector(".vEmail").textContent = !email.value.match(/\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+/g) ?
         "email incorrecto, el formato es: a@a.a" : "";
+
+        console.log(email.value.match(/\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+/g));
+
+        if(!email.value.match(/\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+/g)){
+            email.value = "";
+        }
 }
 
 //Validación contraseña registro
@@ -96,6 +110,10 @@ function validarContraseña(){
 function validarContraseñarepetida(){
     document.querySelector(".vContraseña2").textContent = !(contraseña.value == repetirContraseña.value) ?
         "La contraseña no es la misma" : "";
+
+        if(!(contraseña.value == repetirContraseña.value)){
+            repetirContraseña.value = "";
+        }
 }
 
 // Validar peso

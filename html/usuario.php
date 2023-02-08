@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="../css/checkbox.css">
 
-    <title>Registro</title>
+    <title>Usuario</title>
 </head>
 
 <body>
@@ -20,7 +20,6 @@
 
             <ul class="tab-group">
                 <li class="tab active"><a id="btnRegistrarse">Registrarse</a></li>
-                <li class="tab"><a id="btnEntrar">Entrar</a></li>
             </ul>
 
             <div class="tab-content">
@@ -53,12 +52,6 @@
                             <label for="contraseña">Contraseña:</label>
                             <input type="password" name="contraseña" class="contraseña" required autocomplete="off" />
                             <div class="nvlContraseña"></div>
-                        </div>
-
-                        <div class="field-wrap">
-                            <label for="contraseña2">Repetir contraseña:</label>
-                            <input type="password" name="contraseña2" class="contraseña2" required autocomplete="off" />
-                            <div class="vContraseña2"></div>
                         </div>
 
                         <div class="field-wrap">
@@ -101,35 +94,14 @@
                         </div>
 
 
-                        <button type="submit" class="button button-block" />Registrarse</button>
+                        <button type="submit" class="button button-block" />Actualizar</button>
 
                     </form>
 
                 </div>
 
                 <!-- Apartado Iniciar sesion -->
-                <div id="entrar">
-                    <h1>¡Bienvenido!</h1>
-
-                    <form action="#" id="inicioSesion" method="post">
-
-                        <div class="field-wrap">
-                            <label for="contraseña">Usuario:</label>
-                            <input type="text" name="usuario" class="usuario" required autocomplete="off" />
-                        </div>
-
-                        <div class="field-wrap">
-                            <label for="contraseña">Contraseña:</label>
-                            <input type="password" name="contraseña" class="contraseña" required autocomplete="off"" />
-                        </div>
-
-                        <p class="forgot"><a href="#">Contraseña olvidada?</a></p>
-
-                        <button class="button button-block" />Entrar</button>
-
-                    </form>
-
-                </div>
+    
 
             </div><!-- tab-content -->
 
@@ -139,8 +111,8 @@
 
     <?php include('../plantillas/footer.php'); ?>
 
-    <script src="../js/login.js"></script>
-    <script src="../js/validacionRegistro.js"></script>
+    <script src="../js/editarUsuario.js"></script>
+    <!-- <script src="../js/validacionRegistro.js"></script> -->
     <script src="../js/usuario.js"></script>
 
 </body>

@@ -53,10 +53,6 @@
     color: #000000;
   }
   
-  .tab-content > div:last-child {
-    display: none;
-  }
-  
   h1 {
     text-align: center;
     color: #000000;
@@ -143,9 +139,7 @@
     100% { opacity: 1; }
   }
 
-  #entrar {
-    animation: fadeIn 1s;
-  }
+
   
   @keyframes fadeIn {
     0% { opacity: 0; }

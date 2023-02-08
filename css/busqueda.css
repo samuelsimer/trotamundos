@@ -59,9 +59,8 @@
 	display: flex;
 	flex-direction: column;
 	height: fit-content;
-    background-color: #cceaf4;
-	width: 51wh;
-    border: 2px solid rgb(228, 167, 129);
+    background-color: white;
+	width: 45vw;
     border-radius: 10px;
     padding: 5px;
 }
@@ -76,13 +75,14 @@
 }
 
 .ruta {
+    box-sizing: border-box;
     height: 150px;
     width:100% ;
     margin-top: 12px;
     margin-bottom: 12px;    
     display: flex;
     align-items: center;
-    border: 2px solid rgb(240, 205, 184);
+    border: 6px solid #cceaf4;
     border-radius: 10px;
 }
 

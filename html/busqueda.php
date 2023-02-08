@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="../css/busqueda.css">
     <link rel="stylesheet" href="../css/barraBusqueda.css">
     <link rel="stylesheet" href="../css/checkbox.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
     <title>Busqueda</title>
 </head>
 
@@ -29,11 +35,11 @@
             <!-- Fin buscar ruta -->
 
             <div class="filtros">
-                <!-- Categorías para buscar rutas -->
+                <!-- Categorías para buscar rutas
                 <div class="label">
                     <label for="categorias">Categorías:</label>
                 </div>
-                
+
                 <div class="categoriasRuta">
                     <div class="categoriaRuta">
                         <img src="../imgs/logos/categorias/caminar.png" alt="caminar" title="CAMINAR">
@@ -55,12 +61,12 @@
                         <img src="../imgs/logos/categorias/coche.png" alt="coche" title="COCHE">
                     </div>
                 </div>
-                
-                <!-- Fin categorías -->
+
+                    Fin categorías
 
                 <div class="label">
                     <label for="provincias">Provincias:</label>
-                </div>                
+                </div>
                 <div class="provinciasRuta">
                     <div class="container">
                         <ul class="ks-cboxtags">
@@ -79,6 +85,31 @@
                         </ul>
 
                     </div>
+                </div> -->
+
+                <!-- Filtro distancia -->
+                <div class="container">
+                    <div class="label">
+                        <label for="actividades">Distancia(km):</label>
+                    </div>
+
+                    <ul id = "checkboxKM" class="ks-cboxtags">
+                        <li><input type="checkbox" name="cbCaminar" id="checkboxOne" value="0-5000">
+                            <label for="checkboxOne">0 - 5</label>
+                        </li>
+                        <li><input type="checkbox" name="cbCorrer" id="checkboxTwo" value="5000-10000">
+                            <label for="checkboxTwo">5 - 10</label>
+                        </li>
+                        <li><input type="checkbox" name="cbBicicleta" id="checkboxThree" value="10000-15000">
+                            <label for="checkboxThree">10 - 15</label>
+                        </li>
+                        <li><input type="checkbox" name="cbMoto" id="checkboxFour" value="15000-20000">
+                            <label for="checkboxFour">15 - 20</label>
+                        </li>
+                        <li><input type="checkbox" name="cbCoche" id="checkboxFive" value="20000-25000">
+                            <label for="checkboxFive">20 - 25</label>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
@@ -105,8 +136,6 @@
         <div class="colIzquierda">
             <!-- mapa -->
             <div id="iframeRuta">
-                <iframe frameBorder="0" scrolling="no" src="https://es.wikiloc.com/wikiloc/spatialArtifacts.do?event=view&id=12718712&measures=off&title=on&near=off&images=on&maptype=H"></iframe>
-                <div style="color:#777;font-size:11px;line-height:16px;">Powered by <a style="color:#06d;font-size:11px;line-height:16px;" target="_blank" href="https://es.wikiloc.com">Wikiloc</a></div>
             </div>
         </div>
 
@@ -118,6 +147,9 @@
     <script src="../data/data.js"></script>
     <script src="../js/pantallaInicio.js"></script>
     <script src="../js/busqueda.js"></script>
+    <script src="../js/usuario.js"></script>
+    <script src="../js/checkbox.js"></script>
+
 
 </body>
 
