@@ -8,10 +8,8 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/destacados.css">
     <link rel="stylesheet" href="../css/barraBusqueda.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
-        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
-        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
 
     <title>Inicio</title>
 </head>
@@ -72,7 +70,7 @@
         <div class="rutasRecomendadas">
             <!-- mapa -->
             <div id="iframeRuta">
-                
+
             </div>
             <!-- Rutas generadas dinamicamente js -->
             <div id="recomendados">
@@ -98,8 +96,9 @@
     <script src="../data/data.js"></script>
     <script src="../js/pantallaInicio.js"></script>
     <script src="../js/usuario.js"></script>
+    <script src="../js/restringir.js"></script>
 
-    
+
 
 </body>
 

@@ -7,5 +7,7 @@
 			"path": "../../../../clase/dewc/proyectos/pruebas/nodejs/server_test"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "trotamundos"
+	}
 }

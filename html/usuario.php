@@ -18,15 +18,11 @@
     <div class="contenido">
         <div class="form">
 
-            <ul class="tab-group">
-                <li class="tab active"><a id="btnRegistrarse">Registrarse</a></li>
-            </ul>
-
             <div class="tab-content">
 
                 <!-- Apartado registro -->
                 <div id="registrarse">
-                    <h1>¡Registrate!</h1>
+                    <h1>Mi cuenta: </h1>
 
                     <form action="/" id="registro" method="post">
 

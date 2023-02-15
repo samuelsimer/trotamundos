@@ -1,13 +1,13 @@
 let checkboxGroup = document.querySelectorAll('#checkboxKM li input');
-checkboxGroup.forEach((item) => item.addEventListener('click', filtroKM));
+checkboxGroup.forEach((item) => item.addEventListener('click', filtro));
 
 let filtro = [-1,-1];
 let min = 0;
 let max = 0;
 let seleccionados = []
 // Seleccionar checkbox
-function filtroKM(e){
-    // let valores =  e.target.value.split('-')
+function filtro(e){
+    let valores =  e.target.value.split('-')
     // console.log(seleccionados.includes(valores[0]))
     if(seleccionados.includes(valores[0])){
         seleccionados = seleccionados.filter(item =>{

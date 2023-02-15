@@ -142,6 +142,7 @@
     <script src="../js/login.js"></script>
     <script src="../js/validacionRegistro.js"></script>
     <script src="../js/usuario.js"></script>
+    <script src="../js/restringir.js"></script>
 
 </body>
 

@@ -148,7 +148,7 @@
     <script src="../js/pantallaInicio.js"></script>
     <script src="../js/busqueda.js"></script>
     <script src="../js/usuario.js"></script>
-    <script src="../js/checkbox.js"></script>
+    <script src="../js/filtro.js"></script>
 
 
 </body>

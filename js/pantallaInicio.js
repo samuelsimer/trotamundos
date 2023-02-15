@@ -3,7 +3,7 @@ let pagina = 1;
 añadirListener();
 renderRutas();
 
-let map = L.map('iframeRuta').setView([42.6000300, -5.570320], 13);
+let map = L.map('iframeRuta').setView([42.6000300, -5.570320], 8);
 L.tileLayer('https://tile.thunderforest.com/neighbourhood/{z}/{x}/{y}.png?apikey=156c77879c664ca0b9d88fe8f6904445', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.orgcopyright" > OpenStreetMap</a>'
@@ -25,18 +25,11 @@ function añadirListener() {
 // Renderizar la página, esta función se llamará al ejecutar el script
 // y después de cada vez que se cambie la página
 function renderRutas(filtros = 0) {
-    console.log("******************")
-    console.log(filtros)
-    console.log("******************")
 
     let url = "http://localhost:5000/api/route";
 
     if(filtros != 0){
         url += '?min_dist=' + filtros[0] + '&max_dist=' + filtros[1];
-
-        console.log("******************")
-        console.log(url)
-        console.log("******************")
     }
 
     
@@ -87,20 +80,34 @@ function crearRuta({ id, route_name, start_lat, start_lon, desc, distance }) {
         `</div>
     `;
 
+    L.marker([start_lat, start_lon], {
+        title: "Inicio Ruta",
+        draggable:true,
+        opacity: 0.75
+        }).bindPopup("<i>Inicio Ruta</i>")
+        .addTo(map);
+
     return divRuta;
 }
 
+
+
+
+
 function cambiarMapa(e) {
 
-    let lat = e.target.dataset.lat;
-    let lon = e.target.dataset.lon;
+    let lat = parseFloat(e.target.dataset.lat);
+    let lon = parseFloat(e.target.dataset.lon);
 
-    console.log(e.target);
+    console.log(map);
+    console.log('*******************');
 
-    console.log(lat);
+    console.log(parseFloat(lat));
+
+    
     
 
-    L.marker([parseFloat(lat), parseFloat(lon)], {
+    L.marker([lat, lon], {
         title: "Inicio Ruta",
         draggable:true,
         opacity: 0.75

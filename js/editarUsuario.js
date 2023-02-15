@@ -69,7 +69,8 @@ function loadUser(e) {
         // activities: actividades
     };
 
-    let url = "http://localhost:5000/api/user/?id=" + idUsuario;
+    // let url = "http://localhost:5000/api/user/?id=" + idUsuario;
+    let url = "http://localhost/trotamundos/api/usuarios/register.php";
     fetch(url, {
         method: 'PUT',
         headers: {

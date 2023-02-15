@@ -21,7 +21,7 @@ function validarNombre(){
     document.querySelector(".vNombre").textContent = !nombre.value.match(/(\w+\s?\w*)+/g) ?
         "Campo incorrecto, no dejes el campo vacío y escribe solo letras" : "";
 
-        if(nombre.value.match(/(\w+\s?\w*)+/g)){
+        if(!nombre.value.match(/(\w+\s?\w*)+/g)){
             nombre.value = "";
         }
     
@@ -29,22 +29,24 @@ function validarNombre(){
 
 //Validación nombre usuario
 function validarNUsuario(){
+    
     document.querySelector(".vUsuario").textContent = !nUsuario.value.match(/(\w+\s?\w*)+/g) ?
         "Campo incorrecto, no dejes el campo vacío y escribe solo letras" : "";
 
-        if(nUsuario.value.match(/(\w+\s?\w*)+/g)){
+        if(!nUsuario.value.match(/(\w+\s?\w*)+/g)){
             nUsuario.value = "";
         }
 }
 
 //Validación email
 function validarEmail(){
-    document.querySelector(".vEmail").textContent = !email.value.match(/\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+/g) ?
+    const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+    document.querySelector(".vEmail").textContent = !regex.test(email.value) ?
         "email incorrecto, el formato es: a@a.a" : "";
 
-        console.log(email.value.match(/\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+/g));
 
-        if(!email.value.match(/\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+/g)){
+        if(!regex.test(email.value)){
             email.value = "";
         }
 }
@@ -118,15 +120,12 @@ function validarContraseñarepetida(){
 
 // Validar peso
 function validarPeso(){
-    document.querySelector(".vPeso").textContent = (parseInt(peso.value) > 300 && parseInt(peso.value) < 0) ?
+    document.querySelector(".vPeso").textContent = (parseInt(peso.value) > 300 || parseInt(peso.value) < 0) ?
         "Máximo: 300 y mínimo: 0" : "";
 }
 
 // Validar estatura
 function validarEstatura(){
-    document.querySelector(".vEstatura").textContent = (parseInt(estatura.value) > 300 && parseInt(estatura.value) < 0) ?
+    document.querySelector(".vEstatura").textContent = (parseInt(estatura.value) > 300 || parseInt(estatura.value) < 0) ?
         "Máximo: 300 y mínimo: 0" : "";
 }
-
-
-//Asignar funciones a eventos de cada campo

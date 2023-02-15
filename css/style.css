@@ -1,3 +1,5 @@
+/* color naranja anterior rgb(233, 189, 119) a rgb(233, 189, 119) */
+
 a {
 	text-decoration: none;
 	color: #222;
@@ -53,7 +55,7 @@ header div {
 	box-shadow: 2px 2px #a6c0c9;
 	text-shadow: 0 1px 0px #322e2e, 1px 0 0px #3a4043, 1px 1px 1px ;
 	color: #ffffff;
-	background: rgba(238, 181, 89);
+	background: rgb(233, 189, 119);
 	cursor: pointer; /* Cambia el cursor a una mano */
 }
 
@@ -89,7 +91,7 @@ header div {
 	display: none;
 }
 
-.menuHeader:hover nav, .botonLogin:hover nav {
+.menuHeader:hover nav, .botonLogin:hover .navUsuario {
 	display: block;
     animation: fadeIn 0.5s;
   }
@@ -117,7 +119,7 @@ header div {
 	border: 2px solid #e4e9ec;
 }
 
-.menuHeader nav li:hover, .botonLogin nav li:hover{
+.menuHeader nav li:hover, .navUsuario li:hover{
 	background-color: #bae0ee;
 }
 

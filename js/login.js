@@ -30,7 +30,7 @@ function registrarUsuario(e) {
 
   let datos = new FormData(e.target);
 
-  let posiblesActividades = ['cbCaminar', 'cbCorrer', 'cbBicicleta', 'cbMoto', 'cbCohce'];
+  let posiblesActividades = ['cbCaminar', 'cbCorrer', 'cbBicicleta', 'cbMoto', 'cbCoche'];
 
   let actividades = ['ninguna'];
 
@@ -50,11 +50,17 @@ function registrarUsuario(e) {
     activities: actividades
   };
 
-  let url = "http://localhost:5000/api/register/";
+
+  $usuario = JSON.stringify(datosUsuario);
+
+  console.log(JSON.stringify(datosUsuario));
+
+  // let url = "http://localhost:5000/api/register/";
+  let url = "http://localhost/trotamundos/api/usuarios/register.php";
   fetch(url, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json;charset=utf-8' },
-    body: JSON.stringify(datosUsuario)
+    body: $usuario
   })
     .then((response) => {
       console.log(response.status)
@@ -68,7 +74,6 @@ document.querySelector("#inicioSesion").addEventListener('submit', iniciarSesion
 //Funcion inicio sesion usuario
 function iniciarSesion(e) {
   e.preventDefault();
-
   let datos = new FormData(e.target);
 
   datosUsuario = {
@@ -76,7 +81,9 @@ function iniciarSesion(e) {
     pass: datos.get('contraseña'),
   };
 
-  let url = "http://localhost:5000/api/login/";
+
+
+  let url = "http://localhost/trotamundos/api/usuarios/login.php";
   fetch(url, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json;charset=utf-8' },
@@ -85,17 +92,26 @@ function iniciarSesion(e) {
     .then((response) => {
       return response.json();
     })
-    .then((json)=>{
-      console.log(json.username);
-      //console.log(json.id)
+    .then((json) => {
+
+      localStorage.setItem('id' , json.id);
+      localStorage.setItem('fullname' , json.fullname);
+      localStorage.setItem('username' , json.username);
+      localStorage.setItem('email' , json.email);
+      localStorage.setItem('pass' , json.pass);
+      localStorage.setItem('height' , json.height);
+      localStorage.setItem('weight' , json.weight);
+      localStorage.setItem('birthday' , json.birthday);
+      localStorage.setItem('activities' , json.activities);
+
       let token = json.token;
       localStorage.setItem('token', json.token);
-      localStorage.setItem('id', json.id);
-      localStorage.setItem('usuario', json.username);
+
+      // Cambiar a página de unicio
+      window.location = 'index.php';
 
     });
 
-  // Cambiar a página de unicio
-    window.location.replace('http://localhost/trotamundos/html/index.php');
+  
 }
 

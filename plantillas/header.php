@@ -11,11 +11,11 @@
     </div>
     <div class="imagenHeader"><img src="../imgs/logos/header/logo.png" alt="logo"></div>
     <div class="botonLogin">
-        <button id="botonLogin" type="submit" onclick="location.href='registro.php'">Entrar/Registrarse</button>
+        <button id="botonLogin" type="submit" >Entrar/Registrarse</button>
             <nav>
                 <ol>
                     <li><a href="usuario.php">Mi cuenta</a></li>
-                    <li>Cerrar sesión</li>
+                    <li id="cerrarSesion">Cerrar sesión</li>
                 </ol>   
             </nav>
     </div>
